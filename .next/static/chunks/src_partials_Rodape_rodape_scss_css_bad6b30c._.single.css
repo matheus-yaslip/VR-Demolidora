@@ -1,7 +1,7 @@
 /* [project]/src/partials/Rodape/rodape.scss.css [app-client] (css) */
 footer {
   color: #000;
-  background-color: #6a0dad;
+  background-color: #ce93d8;
 }
 
 footer .top {
@@ -72,7 +72,7 @@ footer .top h2 {
   font-size: 24px;
   font-weight: 800;
   font-family: var(--font-josefin);
-  color: #ce93d8;
+  color: #2b004f;
 }
 
 footer .top .logoFooter {

@@ -211,7 +211,7 @@
 
 .container-contratadas .base .info-contratadas h2 {
   font-family: var(--font-josefin);
-  color: #0077b6;
+  color: #6a0dad;
   padding: 5px 0;
   font-size: 25px;
 }
@@ -330,14 +330,14 @@
 
 .saiba-mais a {
   color: #fff;
-  background-color: #0096c7;
+  background-color: #8e24aa;
   border-radius: 10px;
   padding: 10px 20px;
   transition: all .3s;
 }
 
 .saiba-mais a:hover {
-  background-color: #0077b6;
+  background-color: #6a0dad;
   transition: all .3s;
 }
 
@@ -363,7 +363,7 @@
   letter-spacing: .1em;
   text-align: center;
   color: #fff;
-  background-color: #0077b6;
+  background-color: #6a0dad;
   border-radius: 10px 10px 0 0;
   margin: 0 0 5px;
   padding: 15px 0;
@@ -479,7 +479,7 @@
 }
 
 .direitos-autorais-conteudo a {
-  color: #0077b6;
+  color: #6a0dad;
   font-weight: 700;
 }
 

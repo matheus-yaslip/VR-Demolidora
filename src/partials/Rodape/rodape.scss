@@ -1,7 +1,7 @@
 @use "../../styles/colors.scss" as *;
 
 footer {
-  background-color: $color-purple-2;
+  background-color: $color-light-purple-3;
   color: #000;
 
   .top {
@@ -80,7 +80,7 @@ footer {
       font-size: 24px;
       font-weight: 800;
       font-family: var(--font-josefin);
-      color: $color-light-purple-3;
+      color: $color-dark-purple;
     }
 
     .logoFooter {

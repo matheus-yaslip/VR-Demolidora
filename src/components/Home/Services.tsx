@@ -1,10 +1,9 @@
 "use client";
 
-import { IoTrailSignOutline } from "react-icons/io5";
-import { RiLandscapeAiLine } from "react-icons/ri";
-import { MdEmojiFlags } from "react-icons/md";
-import { BiFootball } from "react-icons/bi";
-import { PiWarehouseLight } from "react-icons/pi";
+import { FaCar, FaCarBurst, } from "react-icons/fa6";
+import { IoCarSport } from "react-icons/io5";
+import { GiPoliceCar } from "react-icons/gi";
+import { BsCarFrontFill } from "react-icons/bs";
 
 export default function Services() {
   return (
@@ -12,24 +11,24 @@ export default function Services() {
       <div className="services">
         <div className="base">
           <div className="service-item">
-            <IoTrailSignOutline />
-            <p>Trilhas ecológicas</p>
+            <FaCar />
+            <p>Serviço 1</p>
           </div>
           <div className="service-item">
-            <RiLandscapeAiLine />
-            <p>Paisagens encantadoras</p>
+            <FaCarBurst />
+            <p>Serviço 2</p>
           </div>
           <div className="service-item">
-            <PiWarehouseLight />
-            <p>Infraestrutura Sofisticada</p>
+            <IoCarSport />
+            <p>Serviço 3</p>
           </div>
           <div className="service-item">
-            <MdEmojiFlags />
-            <p>Entretenimento</p>
+            <BsCarFrontFill />
+            <p>Serviço 4</p>
           </div>
           <div className="service-item">
-            <BiFootball />
-            <p>Quadras</p>
+            <GiPoliceCar />
+            <p>Serviço 5</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,4 @@
 {
-  "/(paginas)/contato/page": "app/(paginas)/contato/page.js",
-  "/(paginas)/informacoes/page": "app/(paginas)/informacoes/page.js",
   "/(paginas)/page": "app/(paginas)/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }
