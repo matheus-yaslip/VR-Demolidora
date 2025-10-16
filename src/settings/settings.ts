@@ -1,6 +1,6 @@
 import { SiteSettings } from "@/types";
 
-const siteName = "Nome do Site";
+const siteName = "Site Base";
 const title = `Início | ${siteName}`;
 const description = "Exemplo";
 const keywords = "Exemplo";
@@ -22,10 +22,10 @@ export const settings: SiteSettings = {
   keywords, // Palavras-chave para SEO index
   canonical: url,
   ddd: "11",
-  selosDark: false, // Selos Rodapé - True = Preto ||  False = Branco
+  selosDark: true, // Selos Rodapé - True = Preto ||  False = Branco
   phoneNumber: "90000-0000",
   whatsappApi: "https://api.whatsapp.com/send?phone=5511900000000",
-  whatsappNumber: "",
+  whatsappNumber: "90000-0000",
   email: "wesley@yaslip.com.br",
   emailDestinatario: "wesley@yaslip.com.br",
   openGraph: {

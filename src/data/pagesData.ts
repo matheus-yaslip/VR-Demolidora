@@ -1,130 +1,115 @@
 export const pagesData = [
   {
-    contratada: "pagina-exemplo",
-    title: "Titulo da página",
-    palavra: "Página de Exemplo",
-    description:
-      "Exemplo",
-    keywords:
-      "Exemplo",
+    contratada: "pagina-exemplo", // Endereço da página
+    title: "Titulo da página", // Titulo é necessario pra dar mais visibilidade, não necessariamente precisa ser igual o h1
+    palavra: "Página de Exemplo", // Palavra contratada
+    description: "Exemplo", // Descrição padrão
+    keywords: "Exemplo", // Keywords - obsoleto
     imageCount: 1,
     content: `
 			<p>
-				Alugar, primeiramente, uma casa na represa de Avaré é uma opção prática para
-				quem busca descanso, lazer e contato com a natureza. Contudo, a região oferece
-				imóveis com acesso direto à água, <a href="aluga-casa-na-represa-de-paranapanema">infraestrutura completa</a> e atividades para
-				todas as idades. Portanto, neste guia, veja como escolher a melhor localização
-				e aproveitar ao máximo sua estadia.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor, lectus nec faucibus 
+				imperdiet, libero nulla posuere odio, ut egestas leo mi nec risus. Sed dignissim lacus 
+				non justo gravida, et <a href="#">viverra magna</a> cursus. Proin id mauris in tortor 
+				dictum posuere. Donec vitae lectus id sem suscipit viverra.
 			</p>
 			<div class="sumario">
 				<h2>Sumário</h2>
 				<ol>
 					<li>
-						<a href="#por-que-alugar-uma-casa-na-represa-de-avare-e-uma-excelente-escolha"
-							>Por que alugar uma casa na represa de Avaré é uma excelente escolha?</a
-						>
+						<a href="#lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit
+						</a>
 						<ol>
-							<li>
-								<a href="#vantagens-de-se-hospedar-a-beira-da-represa"
-									>Vantagens de se hospedar à beira da represa</a
-								>
-							</li>
-							<li>
-								<a href="#conexao-com-a-natureza-e-tranquilidade">Conexão com a natureza e tranquilidade</a>
-							</li>
-							<li>
-								<a href="#atividades-para-toda-a-familia">Atividades para toda a família</a>
-							</li>
+							<li><a href="#vantagens-lorem-ipsum-dolor">Vantagens lorem ipsum dolor</a></li>
+							<li><a href="#consectetur-adipiscing-elit">Consectetur adipiscing elit</a></li>
+							<li><a href="#suspendisse-potenti-integer">Suspendisse potenti integer</a></li>
 						</ol>
 					</li>
 					<li>
-						<a href="#melhores-localizacoes-para-aluguel-de-casas-na-represa"
-							>Melhores localizações para aluguel de casas na represa</a
-						>
+						<a href="#praesent-vel-urna-sed-lorem-maximus-ultricies">
+							Praesent vel urna sed lorem maximus ultricies
+						</a>
 						<ol>
-							<li><a href="#bairro-costa-azul">Bairro Costa Azul</a></li>
-							<li><a href="#riviera-de-santa-cristina">Riviera de Santa Cristina</a></li>
-							<li><a href="#orla-do-camping-municipal">Orla do Camping Municipal</a></li>
+							<li><a href="#mauris-varius-sapien">Mauris varius sapien</a></li>
+							<li><a href="#curabitur-et-felis">Curabitur et felis</a></li>
+							<li><a href="#vestibulum-at-velit">Vestibulum at velit</a></li>
 						</ol>
 					</li>
-					<li><a href="#contato">ENTRE EM CONTATO</a></li>
+					<li><a href="#entre-em-contato">ENTRE EM CONTATO</a></li>
 				</ol>
 			</div>
-			<h2 id="por-que-alugar-uma-casa-na-represa-de-avare-e-uma-excelente-escolha">
-				Por que alugar uma casa na represa de Avaré é uma excelente escolha?
+
+			<h2 id="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit">
+				Lorem ipsum dolor sit amet consectetur adipiscing elit
 			</h2>
 			<p>
-				Alugar uma casa na represa de Avaré oferece, a princípio, acesso direto a uma
-				das <a href="locacao-riviera-santa-cristina-preco">maiores áreas de lazer</a> do interior paulista. A represa permite contato
-				diário com água limpa e espaços abertos para descanso ou prática esportiva. Ou
-				seja, a região atrai visitantes que buscam praticidade, privacidade e
-				liberdade durante a estadia.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec <a href="#">facilisis 
+				vehicula</a> magna nec condimentum. Sed id turpis eget sem ullamcorper imperdiet. 
+				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+				Integer viverra purus vitae leo convallis aliquet.
 			</p>
 
-			<h3 id="vantagens-de-se-hospedar-a-beira-da-represa">Vantagens de se hospedar à beira da represa</h3>
+			<h3 id="vantagens-lorem-ipsum-dolor">Vantagens lorem ipsum dolor</h3>
 			<p>
-				<a href="aluguel-de-casa-na-riviera-de-santa-cristina">Casas à beira da represa</a> oferecem vista privilegiada e acesso facilitado à
-				água. Muitas propriedades disponibilizam píer, rampa para barcos e
-				equipamentos de lazer aquático. Em outras palavras, a hospedagem nesse perfil
-				reduz deslocamentos e amplia o tempo de aproveitamento do dia.
+				<a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing elit. Cras vel arcu 
+				quis felis aliquet faucibus. Mauris vehicula nulla sed mauris euismod, in pulvinar ligula 
+				sollicitudin. Integer eget orci vitae tortor viverra condimentum ut id sapien.
 			</p>
 
-			<h3 id="conexao-com-a-natureza-e-tranquilidade">Conexão com a natureza e tranquilidade</h3>
+			<h3 id="consectetur-adipiscing-elit">Consectetur adipiscing elit</h3>
 			<p>
-				A possui vegetação preservada e baixa densidade
-				urbana. O ambiente favorece descanso, caminhadas ao ar livre e observação da
-				fauna local. Ainda assim, a ausência de ruídos urbanos contribui para uma
-				experiência mais silenciosa e equilibrada.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl at ipsum 
+				feugiat, id porttitor sapien consequat. Curabitur sit amet erat a ante faucibus tincidunt. 
+				Donec laoreet, nulla vitae imperdiet laoreet, lacus erat euismod odio, vitae suscipit nisi 
+				metus ac est.
 			</p>
 
-			<h3 id="atividades-para-toda-a-familia">Atividades para toda a família</h3>
+			<h3 id="suspendisse-potenti-integer">Suspendisse potenti integer</h3>
 			<p>
-				A represa possibilita práticas como stand-up paddle, caiaque, pesca e passeios
-				de lancha. Famílias com crianças encontram espaços seguros para recreação em
-				meio à natureza. Dessa forma, a região também conta com trilhas, restaurantes
-				e pontos turísticos próximos, que ampliam as opções de lazer.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique odio nec 
+				risus accumsan, vitae tempus velit rhoncus. Nunc dignissim, nulla vel malesuada fermentum, 
+				justo turpis consequat nibh, a feugiat magna leo ut ipsum. Fusce vitae lorem ut magna 
+				vestibulum luctus.
 			</p>
 
-			<h2 id="melhores-localizacoes-para-aluguel-de-casas-na-represa">
-				Melhores localizações para aluguel de casas na represa
+			<h2 id="praesent-vel-urna-sed-lorem-maximus-ultricies">
+				Praesent vel urna sed lorem maximus ultricies
 			</h2>
 			<p>
-				A <a href="alugo-casa-na-represa-de-avare">represa de Avaré</a> reúne, em primeiro lugar, bairros e condomínios com boa
-				oferta de casas para temporada. As principais regiões concentram
-				infraestrutura turística e acesso facilitado à água. Entretanto, quem busca
-				praticidade encontra diversas opções conforme o estilo da viagem.
+				Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Vivamus vel urna 
+				at elit condimentum finibus. Pellentesque vel justo non odio suscipit tincidunt. Donec 
+				quis lorem in erat pulvinar efficitur vitae in mi. Ut at arcu id libero volutpat suscipit.
 			</p>
 
-			<h3 id="bairro-costa-azul">Bairro Costa Azul</h3>
+			<h3 id="mauris-varius-sapien">Mauris varius sapien</h3>
 			<p>
-				O bairro Costa Azul possui acesso direto à represa e concentra casas com
-				estrutura para famílias. Nesse sentido, a região conta com mercados, marinas e
-				opções de lazer próximas. Muitos que procuram alguma casa na represa de Avaré
-				consideram o bairro pela conveniência e localização.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut turpis quis urna 
+				dignissim fermentum. Sed lacinia orci id bibendum aliquet. Pellentesque et nisl nec nunc 
+				finibus tempus. Nulla facilisi. Curabitur tristique diam sed nulla tincidunt ultricies.
 			</p>
 
-			<h3 id="riviera-de-santa-cristina">Riviera de Santa Cristina</h3>
+			<h3 id="curabitur-et-felis">Curabitur et felis</h3>
 			<p>
-				A Riviera de Santa Cristina reúne condomínios fechados com imóveis voltados ao
-				turismo de lazer. O local mantém segurança 24 horas, áreas comuns e acesso a
-				trilhas e marinas. No entanto, a demanda por <strong>aluga casa na represa de Avaré</strong>
-				cresce nessa região em feriados e temporadas.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis varius 
+				sapien ac nunc <strong>vulputate convallis</strong>. Proin fringilla eros sed metus rutrum, 
+				vel efficitur sapien sagittis. Integer volutpat ex non est pretium fermentum.
 			</p>
 
-			<h3 id="orla-do-camping-municipal">Orla do Camping Municipal</h3>
+			<h3 id="vestibulum-at-velit">Vestibulum at velit</h3>
 			<p>
-				A orla do Camping Municipal oferece casas próximas ao centro e à área pública
-				da represa. Em suma, a região permite fácil acesso à praia artificial,
-				quiosques e atividades esportivas. Grupos e famílias escolhem a orla pela
-				economia e facilidade de acesso a serviços urbanos.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in sapien nec felis 
+				feugiat commodo. Proin in risus nec augue finibus ullamcorper. Suspendisse quis 
+				pellentesque turpis. Sed sit amet mauris mi. Curabitur consequat metus ut justo congue 
+				iaculis.
 			</p>
 
-			<h2 id="contato">ENTRE EM CONTATO</h2>
+			<h2 id="entre-em-contato">ENTRE EM CONTATO</h2>
 			<p>
-				Entre em contato, primordialmente, com os proprietários ou administradores dos
-				imóveis para verificar disponibilidade, valores e condições de reserva.
-				Todavia, garanta sua estadia com antecedência, especialmente em feriados e
-				alta temporada na <a href="aluga-se-casa-na-represa-de-avare">região da represa de Avaré</a>.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dui neque. Integer non 
+				elit vitae justo congue tempus. Nunc a efficitur metus, at viverra nulla. 
+				<a href="#">Suspendisse potenti</a>. Mauris fringilla efficitur lorem, ac porta sapien 
+				porttitor non.
 			</p>
 		`,
   },

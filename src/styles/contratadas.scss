@@ -250,7 +250,7 @@
           scroll-margin-top: 120px;
           font-size: 30px;
           font-weight: 600;
-          color: #2b96c7;
+          color: $color-purple-3;
 
           @media (max-width: 650px) {
             font-size: 25px;
@@ -265,7 +265,7 @@
           font-weight: 600;
           scroll-margin-top: 120px;
         }
-        
+
         h4 {
           color: #3a3434;
           font-size: 22px;
@@ -278,9 +278,8 @@
           font-weight: 600;
         }
 
-        
         a {
-          color: #00699b;
+          color: $color-purple-2;
         }
       }
     }

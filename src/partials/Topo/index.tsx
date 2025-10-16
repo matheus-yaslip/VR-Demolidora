@@ -13,8 +13,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { josefinSans } from "@/lib/fonts";
 import HamburgerMenu from "@/components/HamburgerMenu";
+import { MdMail } from "react-icons/md";
 
-const { phoneNumber, whatsappNumber, ddd, whatsappApi } = settings;
+const { phoneNumber, whatsappNumber, ddd, whatsappApi, email } = settings;
 
 export default function Topo() {
   const [isFixed, setIsFixed] = useState(false);
@@ -54,6 +55,9 @@ export default function Topo() {
             ) : (
               ""
             )}
+            <Link href={`mailto:${email}`} target="_blank">
+              <MdMail /> {`${email}`}
+            </Link>
           </div>
         </div>
         <div className="topo-menu">

@@ -54,7 +54,12 @@ export default function Rodape() {
         </div>
         <div className="footerSelos">
           <div className="logoYaslip">
-            <object data="/selos/selo-branco.svg" type="image/svg+xml"></object>
+            <object
+              data={`/selos/${
+                selosDark ? "selo-preto.svg" : "selo-branco.svg"
+              }`}
+              type="image/svg+xml"
+            ></object>
           </div>
           <ul>
             <li>

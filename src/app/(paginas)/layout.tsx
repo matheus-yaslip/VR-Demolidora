@@ -50,9 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* GTM HEAD */}
-      </head>
+      <head>{/* GTM HEAD */}</head>
       <body
         className={`${frankRuhl.variable} ${poppins.variable} ${josefinSans.variable} ${openSans.variable}`}
       >

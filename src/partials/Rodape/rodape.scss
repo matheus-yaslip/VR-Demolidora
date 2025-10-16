@@ -1,7 +1,7 @@
 @use "../../styles/colors.scss" as *;
 
 footer {
-  background-color: $color-light-purple-3;
+  background-color: #f3f3f3;
   color: #000;
 
   .top {
@@ -38,7 +38,7 @@ footer {
           display: flex;
           align-items: center;
           gap: 5px;
-          color: #fff;
+          color: #242424;
         }
       }
     }
@@ -47,7 +47,6 @@ footer {
       a {
         font-family: var(--font-poppins);
         position: relative;
-        color: #ffffff;
         display: flex;
         align-items: center;
         width: fit-content;
