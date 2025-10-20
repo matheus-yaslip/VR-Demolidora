@@ -69,9 +69,11 @@
     flex-direction: column;
     text-align: center;
     gap: 10px;
+    padding: 10px 20px;
 
     h2 {
       font-size: 3rem;
+      color: $color-light-purple-5;
     }
 
     p {
@@ -82,8 +84,8 @@
     &.banner-1 {
       background: linear-gradient(
           53deg,
-          rgba(0, 0, 0, 0.3764705882),
-          rgba(0, 0, 0, 0.2196078431)
+          rgba(0, 0, 0, 0.705),
+          rgba(0, 0, 0, 0.507)
         ),
         url(../../public/banner/banner1.webp) center;
       background-repeat: no-repeat;
@@ -92,8 +94,8 @@
     &.banner-2 {
       background: linear-gradient(
           53deg,
-          rgba(0, 0, 0, 0.3764705882),
-          rgba(0, 0, 0, 0.2196078431)
+          rgba(0, 0, 0, 0.705),
+          rgba(0, 0, 0, 0.507)
         ),
         url(../../public/banner/banner2.webp) center;
       background-repeat: no-repeat;
@@ -102,8 +104,8 @@
     &.banner-3 {
       background: linear-gradient(
           53deg,
-          rgba(0, 0, 0, 0.3764705882),
-          rgba(0, 0, 0, 0.2196078431)
+          rgba(0, 0, 0, 0.507),
+          rgba(0, 0, 0, 0.507)
         ),
         url(../../public/banner/banner3.webp) center;
       background-repeat: no-repeat;

@@ -18,8 +18,7 @@ export async function GET() {
 
   const allPages = [...fixedPages, ...contractedPages];
 
-  // const today = new Date().toISOString().split("T")[0]; // Apenas YYYY-MM-DD
-  // <lastmod>${today}</lastmod>
+  const today = new Date().toISOString().split("T")[0]; // Apenas YYYY-MM-DD || Alterar para data fixa ao subir em produção
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -28,7 +27,7 @@ export async function GET() {
       (page) => `
   <url>
     <loc>${baseUrl}${page.path}</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`

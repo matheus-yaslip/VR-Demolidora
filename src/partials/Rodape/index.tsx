@@ -8,10 +8,12 @@ import "@/partials/Rodape/rodape.scss";
 import ScrollToTop from "@/components/ScrollToTop";
 import { url, settings } from "@/settings/settings";
 import { usePathname } from "next/navigation";
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 export default function Rodape() {
-  const { siteName, selosDark, phoneNumber, ddd, email, whatsappApi } =
+  const { siteName, selosDark, numeroTelefone, ddd, email, whatsappApi } =
     settings;
+  const { rua, numero, cidade, estado, cep, urlMaps } = settings.endereco;
   const year = new Date().getFullYear();
   const pathname = usePathname();
   const urlFormatted = url.replace(/\/$/, "");
@@ -43,12 +45,16 @@ export default function Rodape() {
             <li>
               <BsTelephoneForward />
               <Link
-                href={`tel:0${ddd}${phoneNumber}`}
-              >{`(${ddd}) ${phoneNumber}`}</Link>
+                href={`tel:0${ddd}${numeroTelefone}`}
+              >{`(${ddd}) ${numeroTelefone}`}</Link>
             </li>
             <li>
               <IoMailOutline size={20} />
               <Link href={`mailto:${email}`}>{`${email}`}</Link>
+            </li>
+            <li>
+              <FaMapMarkedAlt />{" "}
+              <Link href={urlMaps} target="_blank">{`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}</Link>
             </li>
           </ul>
         </div>

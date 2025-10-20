@@ -3,17 +3,19 @@ import TitlePage from "@/components/TitlePage";
 import { settings } from "@/settings/settings";
 import "@/styles/index.scss";
 import { Metadata } from "next";
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 import { FaPhone } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 
-const { siteName, phoneNumber, ddd, email } = settings;
+const { siteName, numeroTelefone, ddd, email } = settings;
+const { rua, numero, cidade, estado, cep } = settings.endereco;
 
 const title = "Contato";
-const description = 
-  "Entre em contato com a equipe da Riviera de Santa Cristina XIII para mais informações sobre nossas casas exclusivas e como aproveitar momentos inesquecíveis.";
-const keywords = 
-  "contato Riviera de Santa Cristina XIII, informações sobre casas, contato imobiliária, Riviera de Santa Cristina, imóveis à venda, atendimento ao cliente, entrar em contato";
+const description =
+  "Exemplo";
+const keywords =
+  "Exemplo";
 const canonical = "contato";
 
 export const metadata: Metadata = {
@@ -54,11 +56,19 @@ export default function Contato() {
               </p>
             </div>
             <div className="contact">
-              <a href={`tel:0${ddd}${phoneNumber}`}>
-                <FaPhone /> {`(${ddd}) ${phoneNumber}`}
+              <a
+                href={`tel:0${ddd}${numeroTelefone}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaPhone /> {`(${ddd}) ${numeroTelefone}`}
               </a>
-              <a href={`mailto:${email}`}>
+              <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
                 <FiMail /> {`${email}`}
+              </a>
+              <a href="" target="_blank" rel="noreferrer">
+                <FaMapMarkedAlt />{" "}
+                {`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}
               </a>
             </div>
           </div>

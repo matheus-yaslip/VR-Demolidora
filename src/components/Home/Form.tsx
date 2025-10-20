@@ -2,12 +2,14 @@
 
 import ContactForm from "../ContactForm/ContactForm";
 import "../../styles/index.scss";
-import { FaPhone } from "react-icons/fa";
+import { FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { settings } from "@/settings/settings";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-const { phoneNumber, ddd, email } = settings;
+const { numeroTelefone, ddd, email } = settings;
+const { rua, numero, cidade, estado, cep, urlMaps } = settings.endereco;
 
 export default function Form() {
   const pathname = usePathname();
@@ -25,12 +27,15 @@ export default function Form() {
             </p>
           </div>
           <div className="contact">
-            <a href={`tel:0${ddd}${phoneNumber}`} target="_blank" rel="noreferrer">
-              <FaPhone /> {`(${ddd}) ${phoneNumber}`}
-            </a>
-            <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
+            <Link href={`tel:0${ddd}${numeroTelefone}`} target="_blank" rel="noreferrer">
+              <FaPhone /> {`(${ddd}) ${numeroTelefone}`}
+            </Link>
+            <Link href={`mailto:${email}`} target="_blank" rel="noreferrer">
               <FiMail /> {`${email}`}
-            </a>
+            </Link>
+            <Link href={urlMaps} target="_blank" rel="noreferrer">
+              <FaMapMarkedAlt /> {`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}
+            </Link>
           </div>
         </div>
         <ContactForm variation="contato-form-included" />

@@ -53,10 +53,10 @@ footer {
 
         &::before {
           content: "";
-          background-color: #ffffff;
+          background-color: #1d1d1d;
           position: absolute;
           left: 0px;
-          bottom: 0;
+          bottom: 3px;
           width: 100%;
           height: 2px;
           transform: scaleX(0);

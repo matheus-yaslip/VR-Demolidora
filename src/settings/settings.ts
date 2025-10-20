@@ -23,11 +23,19 @@ export const settings: SiteSettings = {
   canonical: url,
   ddd: "11",
   selosDark: true, // Selos Rodapé - True = Preto ||  False = Branco
-  phoneNumber: "90000-0000",
+  numeroTelefone: "90000-0000",
   whatsappApi: "https://api.whatsapp.com/send?phone=5511900000000",
-  whatsappNumber: "90000-0000",
+  numeroWhatsapp: "90000-0000",
   email: "wesley@yaslip.com.br",
   emailDestinatario: "wesley@yaslip.com.br",
+  endereco: {
+    urlMaps: "https://maps.app.goo.gl/caH1G5Rs1tBdgBRw9",
+    rua: "Rua Exemplo",
+    numero: "123",
+    cidade: "São Paulo",
+    estado: "SP",
+    cep: "00000-000",
+  },
   openGraph: {
     url,
     title,

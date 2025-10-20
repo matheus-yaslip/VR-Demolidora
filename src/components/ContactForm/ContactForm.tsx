@@ -11,6 +11,7 @@ export default function ContactForm({ variation }: { variation: string }) {
   const [formData, setFormData] = useState<FormData>({
     nome: "",
     email: "",
+    empresa: "",
     telefone: "",
     como_nos_conheceu: "",
     mensagem: "",
@@ -100,6 +101,7 @@ export default function ContactForm({ variation }: { variation: string }) {
       setFormData({
         nome: "",
         email: "",
+        empresa: "",
         telefone: "",
         como_nos_conheceu: "",
         mensagem: "",
@@ -172,6 +174,24 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
         <div className="input">
+          <label htmlFor="empresa">Empresa <span style={{color: "red"}}>*</span></label>
+          <input
+            type="text"
+            maxLength={15}
+            name="empresa"
+            id="empresa"
+            placeholder="Empresa"
+            value={formData.empresa}
+            onKeyUp={phoneFormat}
+            onClick={loadRecaptcha}
+            onChange={(e) =>
+              setFormData({ ...formData, empresa: e.target.value })
+            }
+            required
+          />
+        </div>
+      </div>
+        <div className="input">
           <label htmlFor="como_nos_conheceu">Como nos conheceu? <span style={{color: "red"}}>*</span></label>
           <select
             value={formData.como_nos_conheceu}
@@ -195,7 +215,6 @@ export default function ContactForm({ variation }: { variation: string }) {
             <option value="Outros">Outros</option>
           </select>
         </div>
-      </div>
       <div className="input">
         <label htmlFor="mensagem">Mensagem <span style={{color: "red"}}>*</span></label>
         <textarea

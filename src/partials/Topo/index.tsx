@@ -15,7 +15,7 @@ import { josefinSans } from "@/lib/fonts";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { MdMail } from "react-icons/md";
 
-const { phoneNumber, whatsappNumber, ddd, whatsappApi, email } = settings;
+const { numeroTelefone, numeroWhatsapp, ddd, whatsappApi, email } = settings;
 
 export default function Topo() {
   const [isFixed, setIsFixed] = useState(false);
@@ -34,7 +34,7 @@ export default function Topo() {
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [pathname]); // ✅ Agora funciona no App Router
+  }, [pathname]); // funciona no App Router
 
   const toggleMobile = () => {
     setIsMenuOpen((prev) => !prev);
@@ -45,12 +45,12 @@ export default function Topo() {
       <div className={isFixed ? "topo fixed" : "topo"}>
         <div className="topo-contato">
           <div className={`base ${josefinSans.className}`}>
-            <Link href={`tel:0${ddd}${phoneNumber}`} target="_blank">
-              <BsTelephoneForward /> {`(${ddd}) ${phoneNumber}`}
+            <Link href={`tel:0${ddd}${numeroTelefone}`} target="_blank">
+              <BsTelephoneForward /> {`(${ddd}) ${numeroTelefone}`}
             </Link>
-            {whatsappNumber ? (
+            {numeroWhatsapp ? (
               <Link href={whatsappApi} target="_blank">
-                <FaWhatsapp /> {`(${ddd}) ${whatsappNumber}`}
+                <FaWhatsapp /> {`(${ddd}) ${numeroWhatsapp}`}
               </Link>
             ) : (
               ""
@@ -70,12 +70,18 @@ export default function Topo() {
                 <Link href="/">Home</Link>
               </li>
               <li className="topo-item">
-                <Link href="/contato">Contato</Link>
+                <Link href="/contato">Sobre nós</Link>
+              </li>
+              <li className="topo-item">
+                <Link href="/pagina-exemplo">Exemplo</Link>
               </li>
               <li className="topo-item">
                 <Link href="/informacoes">+</Link>
               </li>
             </ul>
+            <Link href="/contato" className="botao-contato">
+              Entre em contato
+            </Link>
             <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMobile} />
           </div>
         </div>
@@ -86,7 +92,10 @@ export default function Topo() {
             <Link href="/">Home</Link>
           </li>
           <li className="topo-item">
-            <Link href="/contato">Contato</Link>
+            <Link href="/contato">Sobre nós</Link>
+          </li>
+          <li className="topo-item">
+            <Link href="/pagina-exemplo">Exemplo</Link>
           </li>
           <li className="topo-item">
             <Link href="/informacoes">+</Link>

@@ -10,7 +10,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 
-const { siteName, ddd, whatsappApi, phoneNumber, email } = settings;
+const { siteName, ddd, whatsappApi, numeroTelefone, email } = settings;
 
 export default async function RodapeMobile() {
   const userAgent = (await headers()).get("user-agent") || "";
@@ -22,7 +22,7 @@ export default async function RodapeMobile() {
         <div className="icones-rodape">
           <a
             className="phone icone"
-            href={`tel:0${ddd}${phoneNumber}`}
+            href={`tel:0${ddd}${numeroTelefone}`}
             title="Telefone para contato"
           >
             <FaPhoneAlt />

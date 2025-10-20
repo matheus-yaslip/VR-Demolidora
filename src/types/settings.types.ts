@@ -6,11 +6,19 @@ export interface SiteSettings {
   siteName: string;
   ddd: string;
   selosDark: boolean;
-  phoneNumber: string;
+  numeroTelefone: string;
   whatsappApi: string;
-  whatsappNumber: string;
+  numeroWhatsapp: string;
   email: string;
   emailDestinatario: string;
+  endereco: {
+    rua: string;
+    numero: string;
+    cidade: string;
+    urlMaps: string;
+    estado: string;
+    cep: string;
+  };
   openGraph: {
     url: string;
     title: string;
