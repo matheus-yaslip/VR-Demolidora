@@ -11,7 +11,7 @@ const EMAIL_USER = "yaslipsmtp";
 const EMAIL_PASS = "qSPQYgha5680";
 const EMAIL_FROM = "enviodedicado@yaslip.com.br";
 const EMAIL_BCC = "backupmail.yaslip@gmail.com";
-const CLIENTE_NOME = "Casa Santa Cristina XIII";
+const CLIENTE_NOME = "Nome do Site";
 const EMAIL_TO = emailDestinatario;
 
 const RECAPTCHA_SECRET_KEY = "6LdzZvAqAAAAAOYMoYuzttIfsgWqoCFWtn5f80EP";

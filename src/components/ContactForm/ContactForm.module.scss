@@ -1,6 +1,6 @@
-@use "./colors.scss" as *;
+@use "../../styles/colors.scss" as *;
 
-.contato-form {
+.contatoForm {
   color: black;
   display: flex;
   flex-direction: column;
@@ -12,12 +12,12 @@
     width: 100%;
   }
 
-  .box-input {
+  .boxInput {
     display: flex;
     gap: 10px;
   }
 
-  .input {
+  .inputForm {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -68,7 +68,7 @@
     }
   }
 
-  .btn-submit {
+  .btnSubmit {
     padding: 15px 20px;
     border: none;
     border-radius: 5px;
@@ -87,7 +87,7 @@
   }
 }
 
-.form-success {
+.formSuccess {
   color: #949494;
   font-size: 0.9em;
   padding: 5px 10px;
@@ -97,7 +97,7 @@
 }
 
 // versão included - para estilização diferente da página de contato, para outras variações criar e declarar como prop do ContactForm
-.contato-form-included {
+.contatoFormIncluded {
   color: black;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@
     width: 100%;
   }
 
-  .box-input {
+  .boxInput {
     display: flex;
     gap: 10px;
 
@@ -118,7 +118,7 @@
     }
   }
 
-  .input {
+  .inputForm {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -170,7 +170,7 @@
     }
   }
 
-  .btn-submit {
+  .btnSubmit {
     padding: 15px 20px;
     border: none;
     border-radius: 5px;

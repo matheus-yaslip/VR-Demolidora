@@ -72,7 +72,7 @@ export default function Contato() {
               </a>
             </div>
           </div>
-          <ContatoForm variation="contato-form" />
+          <ContatoForm variation="contatoForm" />
         </div>
         <iframe
           src={mapaEmbed}

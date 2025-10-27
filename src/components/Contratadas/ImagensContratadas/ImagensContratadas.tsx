@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import "@/components/ModalImages/ModalImages.scss";
 import { useState } from "react";
 
 const ImageGallery = ({

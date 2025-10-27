@@ -38,7 +38,7 @@ export default function Form() {
             </Link>
           </div>
         </div>
-        <ContactForm variation="contato-form-included" />
+        <ContactForm variation="contatoFormIncluded" />
       </div>  
     </div>
   );

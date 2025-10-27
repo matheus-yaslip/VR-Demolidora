@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { settings, url } from "@/settings/settings";
 import { ResponseData, FormData } from "@/types";
-import "@/styles/formulario.scss";
+import styles from './ContactForm.module.scss';
 
 const { siteName, emailDestinatario } = settings;
 const RECAPTCHA_SITE_KEY = "6LdzZvAqAAAAACIdoEUtHKHYYNNwIyDVODykjcpn"; // Substituir pela chave do site reCAPTCHA
@@ -123,10 +123,10 @@ export default function ContactForm({ variation }: { variation: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`${variation}`}>
-      {message && <p className="form-success">{message}</p>}
-      <div className="box-input">
-        <div className="input">
+    <form onSubmit={handleSubmit} className={`${styles[variation]}`}>
+      {message && <p className={styles.formSuccess}>{message}</p>}
+      <div className={styles.boxInput}>
+        <div className={styles.inputForm}>
           <label htmlFor="nome">Nome <span style={{color: "red"}}>*</span></label>
           <input
             type="text"
@@ -139,7 +139,7 @@ export default function ContactForm({ variation }: { variation: string }) {
             required
           />
         </div>
-        <div className="input">
+        <div className={styles.inputForm}>
           <label htmlFor="email">Email <span style={{color: "red"}}>*</span></label>
           <input
             type="email"
@@ -155,8 +155,8 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
       </div>
-      <div className="box-input">
-        <div className="input">
+      <div className={styles.boxInput}>
+        <div className={styles.inputForm}>
           <label htmlFor="telefone">Telefone <span style={{color: "red"}}>*</span></label>
           <input
             type="text"
@@ -173,7 +173,7 @@ export default function ContactForm({ variation }: { variation: string }) {
             required
           />
         </div>
-        <div className="input">
+        <div className={styles.inputForm}>
           <label htmlFor="empresa">Empresa <span style={{color: "red"}}>*</span></label>
           <input
             type="text"
@@ -191,7 +191,7 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
       </div>
-        <div className="input">
+        <div className={styles.inputForm}>
           <label htmlFor="como_nos_conheceu">Como nos conheceu? <span style={{color: "red"}}>*</span></label>
           <select
             value={formData.como_nos_conheceu}
@@ -215,7 +215,7 @@ export default function ContactForm({ variation }: { variation: string }) {
             <option value="Outros">Outros</option>
           </select>
         </div>
-      <div className="input">
+      <div className={styles.inputForm}>
         <label htmlFor="mensagem">Mensagem <span style={{color: "red"}}>*</span></label>
         <textarea
           placeholder="Mensagem"
@@ -229,7 +229,7 @@ export default function ContactForm({ variation }: { variation: string }) {
           required
         />
       </div>
-      <button className="btn-submit" type="submit" disabled={loading}>
+      <button className={styles.btnSubmit} type="submit" disabled={loading}>
         {loading ? "Enviando..." : "Enviar"}
       </button>
     </form>
