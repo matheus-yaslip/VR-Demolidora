@@ -3,9 +3,19 @@ import { useState } from "react";
 import { settings, url } from "@/settings/settings";
 import { ResponseData, FormData } from "@/types";
 import styles from './ContactForm.module.scss';
+import z from "zod";
 
 const { siteName, emailDestinatario } = settings;
 const RECAPTCHA_SITE_KEY = "6LdzZvAqAAAAACIdoEUtHKHYYNNwIyDVODykjcpn"; // Substituir pela chave do site reCAPTCHA
+
+const FormDataSchema = z.object({
+  nome: z.string().min(1, "O nome é obrigatório."),
+  email: z.string().email("Email inválido."),
+  empresa: z.string().min(1, "A empresa é obrigatória."),
+  telefone: z.string().min(1, "O telefone é obrigatório."),
+  como_nos_conheceu: z.string().min(1, "Este campo é obrigatório."),
+  mensagem: z.string().min(1, "A mensagem é obrigatória."),
+});
 
 export default function ContactForm({ variation }: { variation: string }) {
   const [formData, setFormData] = useState<FormData>({
@@ -38,12 +48,10 @@ export default function ContactForm({ variation }: { variation: string }) {
     document.body.appendChild(script);
 
     script.onload = () => {
-      // console.log("reCAPTCHA carregado!");
       setRecaptchaLoaded(true);
     };
   };
 
-  // 🔹 Obtém o token do reCAPTCHA antes de enviar o formulário
   async function getRecaptchaToken(): Promise<string> {
     return new Promise((resolve, reject) => {
       if (!window.grecaptcha || !window.grecaptcha.execute) {
@@ -64,12 +72,13 @@ export default function ContactForm({ variation }: { variation: string }) {
 
     try {
       const recaptchaToken = await getRecaptchaToken();
-
+      const formDataValid = FormDataSchema.parse(formData);
       setMessage("Enviando e-mail...");
+      
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, recaptchaToken }),
+        body: JSON.stringify({ ...formDataValid, recaptchaToken }),
       });
 
       const data: ResponseData = await res.json();

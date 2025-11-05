@@ -1,5 +1,5 @@
 import { settings } from "@/settings/settings";
-import Script from "next/script";
+// import Script from "next/script";
 import "normalize.css";
 import "@/styles/globals.scss";
 
