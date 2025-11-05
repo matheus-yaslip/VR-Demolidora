@@ -4,18 +4,10 @@ import { settings, url } from "@/settings/settings";
 import { ResponseData, FormData } from "@/types";
 import styles from './ContactForm.module.scss';
 import z from "zod";
+import { FormDataSchema } from "@/schemas/form";
 
 const { siteName, emailDestinatario } = settings;
 const RECAPTCHA_SITE_KEY = "6LdzZvAqAAAAACIdoEUtHKHYYNNwIyDVODykjcpn"; // Substituir pela chave do site reCAPTCHA
-
-const FormDataSchema = z.object({
-  nome: z.string().min(1, "O nome é obrigatório."),
-  email: z.string().email("Email inválido."),
-  empresa: z.string().min(1, "A empresa é obrigatória."),
-  telefone: z.string().min(1, "O telefone é obrigatório."),
-  como_nos_conheceu: z.string().min(1, "Este campo é obrigatório."),
-  mensagem: z.string().min(1, "A mensagem é obrigatória."),
-});
 
 export default function ContactForm({ variation }: { variation: string }) {
   const [formData, setFormData] = useState<FormData>({
@@ -74,7 +66,7 @@ export default function ContactForm({ variation }: { variation: string }) {
       const recaptchaToken = await getRecaptchaToken();
       const formDataValid = FormDataSchema.parse(formData);
       setMessage("Enviando e-mail...");
-      
+
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -136,7 +128,7 @@ export default function ContactForm({ variation }: { variation: string }) {
       {message && <p className={styles.formSuccess}>{message}</p>}
       <div className={styles.boxInput}>
         <div className={styles.inputForm}>
-          <label htmlFor="nome">Nome <span style={{color: "red"}}>*</span></label>
+          <label htmlFor="nome">Nome <span style={{ color: "red" }}>*</span></label>
           <input
             type="text"
             name="nome"
@@ -149,7 +141,7 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
         <div className={styles.inputForm}>
-          <label htmlFor="email">Email <span style={{color: "red"}}>*</span></label>
+          <label htmlFor="email">Email <span style={{ color: "red" }}>*</span></label>
           <input
             type="email"
             name="email"
@@ -166,7 +158,7 @@ export default function ContactForm({ variation }: { variation: string }) {
       </div>
       <div className={styles.boxInput}>
         <div className={styles.inputForm}>
-          <label htmlFor="telefone">Telefone <span style={{color: "red"}}>*</span></label>
+          <label htmlFor="telefone">Telefone <span style={{ color: "red" }}>*</span></label>
           <input
             type="text"
             maxLength={15}
@@ -183,7 +175,7 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
         <div className={styles.inputForm}>
-          <label htmlFor="empresa">Empresa <span style={{color: "red"}}>*</span></label>
+          <label htmlFor="empresa">Empresa <span style={{ color: "red" }}>*</span></label>
           <input
             type="text"
             maxLength={15}
@@ -200,32 +192,32 @@ export default function ContactForm({ variation }: { variation: string }) {
           />
         </div>
       </div>
-        <div className={styles.inputForm}>
-          <label htmlFor="como_nos_conheceu">Como nos conheceu? <span style={{color: "red"}}>*</span></label>
-          <select
-            value={formData.como_nos_conheceu}
-            onClick={loadRecaptcha}
-            name="como_nos_conheceu"
-            id="como_nos_conheceu"
-            onChange={(e) =>
-              setFormData({ ...formData, como_nos_conheceu: e.target.value })
-            }
-            required
-          >
-            <option value="" disabled>
-              Selecione uma opção
-            </option>
-            <option value="Busca do Google">Busca do Google</option>
-            <option value="Outros Buscadores">Outros Buscadores</option>
-            <option value="Links Patrocinados">Links patrocinados</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Twitter">Twitter</option>
-            <option value="Indicação de um amigo">Indicação de um amigo</option>
-            <option value="Outros">Outros</option>
-          </select>
-        </div>
       <div className={styles.inputForm}>
-        <label htmlFor="mensagem">Mensagem <span style={{color: "red"}}>*</span></label>
+        <label htmlFor="como_nos_conheceu">Como nos conheceu? <span style={{ color: "red" }}>*</span></label>
+        <select
+          value={formData.como_nos_conheceu}
+          onClick={loadRecaptcha}
+          name="como_nos_conheceu"
+          id="como_nos_conheceu"
+          onChange={(e) =>
+            setFormData({ ...formData, como_nos_conheceu: e.target.value })
+          }
+          required
+        >
+          <option value="" disabled>
+            Selecione uma opção
+          </option>
+          <option value="Busca do Google">Busca do Google</option>
+          <option value="Outros Buscadores">Outros Buscadores</option>
+          <option value="Links Patrocinados">Links patrocinados</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Indicação de um amigo">Indicação de um amigo</option>
+          <option value="Outros">Outros</option>
+        </select>
+      </div>
+      <div className={styles.inputForm}>
+        <label htmlFor="mensagem">Mensagem <span style={{ color: "red" }}>*</span></label>
         <textarea
           placeholder="Mensagem"
           id="mensagem"
