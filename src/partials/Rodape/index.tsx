@@ -117,7 +117,7 @@ export default function Rodape() {
               {typeof window !== "undefined" &&
                 window.location.protocol === "https:" && (
                   <Link
-                    href={`https://developers.google.com/speed/pagespeed/insights/?url=${fullUrl}`}
+                    href={`https://www.sslshopper.com/ssl-checker.html#hostname=${fullUrl}`}
                     target="_blank"
                   >
                     <Image
