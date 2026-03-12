@@ -2,13 +2,6 @@
   position: relative;
   color: #fff;
   /* ========= TOP ========= */
-  /* ========= TITLES ========= */
-  /* ========= BRAND (COL 1) ========= */
-  /* ========= QUICK LINKS (COL 2) ========= */
-  /* ========= CONTACT (COL 3) ========= */
-  /* ========= NEWSLETTER (COL 4) ========= */
-  /* ========= BOTTOM ========= */
-  /* ========= RESPONSIVO ========= */
 }
 .footer .top {
   position: relative;
@@ -53,6 +46,9 @@
 .footer .col {
   min-width: 0;
 }
+.footer {
+  /* ========= TITLES ========= */
+}
 .footer .title {
   font-family: var(--font-josefin);
   font-weight: 800;
@@ -61,6 +57,9 @@
   color: #fff;
   letter-spacing: 0.2px;
 }
+.footer {
+  /* ========= BRAND (COL 1) ========= */
+}
 .footer .logoFooter {
   display: inline-flex;
   align-items: center;
@@ -68,6 +67,9 @@
 .footer .logoFooter img {
   width: 190px;
   height: auto;
+  background: #fff;
+  padding: 0.25rem;
+  border-radius: 2.5rem;
 }
 .footer .description {
   margin: 14px 0 18px;
@@ -101,6 +103,9 @@
   transform: translateY(-2px);
   filter: brightness(1.05);
 }
+.footer {
+  /* ========= QUICK LINKS (COL 2) ========= */
+}
 .footer .list {
   list-style: none;
   padding: 0;
@@ -131,6 +136,9 @@
 }
 .footer .list a:hover {
   color: #fff;
+}
+.footer {
+  /* ========= CONTACT (COL 3) ========= */
 }
 .footer .contatctList,
 .footer .contactList {
@@ -178,6 +186,9 @@
   text-decoration: underline;
   text-decoration-color: #9d090b;
   text-underline-offset: 3px;
+}
+.footer {
+  /* ========= NEWSLETTER (COL 4) ========= */
 }
 .footer .nextText {
   margin: 0 0 14px;
@@ -234,6 +245,9 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 }
+.footer {
+  /* ========= BOTTOM ========= */
+}
 .footer .bottom {
   background: #0a0a0a;
   padding: 18px 0;
@@ -285,6 +299,9 @@
 }
 .footer .legal a:hover {
   color: #fff;
+}
+.footer {
+  /* ========= RESPONSIVO ========= */
 }
 @media (max-width: 1100px) {
   .footer .top .container {

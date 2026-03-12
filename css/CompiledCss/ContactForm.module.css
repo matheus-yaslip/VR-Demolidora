@@ -73,14 +73,14 @@
   border: none;
   border-radius: 5px;
   font-size: 1.1rem;
-  background-color: #4a2fe0;
+  background-color: #9d090b;
   color: white;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .contatoForm .btnSubmit:hover {
-  background-color: #6a46fc;
+  background-color: #8a0709;
   transition: all 0.3s ease;
   color: #f4eef6;
 }

@@ -1,12 +1,11 @@
 .titlePage {
-  padding: 200px 0 80px;
+  padding: 270px 0 80px;
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
-  background: #8517cf;
-  background: linear-gradient(168deg, rgb(133, 23, 207) 0%, rgb(106, 70, 252) 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#8517CF", endColorstr="#6A46FC", GradientType=0 );
+  background: url(/imgs/titulo-pag.jpg) center no-repeat;
+  background-size: cover;
   background-size: cover;
 }
 @media (max-width: 600px) {

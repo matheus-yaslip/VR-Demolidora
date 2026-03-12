@@ -10,17 +10,24 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 3px rgba(179, 179, 179, 0.568);
-  background-color: #ececec;
-  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 3px rgba(70, 69, 69, 0.568);
+  background-color: #1b1b1b;
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+  transition: all 0.4s ease;
 }
 .voltar-para-o-topo svg {
-  color: #4824aa;
+  color: #9d090b;
   transition: all 0.3s ease;
 }
+.voltar-para-o-topo.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 .voltar-para-o-topo:hover {
-  background-color: #4824aa;
-  transition: all 0.3s ease;
+  background-color: rgba(39, 39, 39, 0.425);
   box-shadow: inset 0 0 0 3px rgba(189, 189, 189, 0.438);
 }
 .voltar-para-o-topo:hover svg {

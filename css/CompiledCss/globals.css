@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
