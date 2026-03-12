@@ -63,17 +63,20 @@ export default function Topo() {
         <div className="topo-menu">
           <div className="base">
             <Link href="/">
-              <Image alt="Imagem" src="/logo.webp" width={200} height={60} />
+              <Image alt="Imagem" src="/imgs/logo.png" width={200} height={60} />
             </Link>
             <ul className="topo-links">
               <li className="topo-item">
                 <Link href="/">Home</Link>
               </li>
               <li className="topo-item">
+                <Link href="/servicos">Servicos</Link>
+              </li>
+              <li className="topo-item">
                 <Link href="/sobre-nos">Sobre nós</Link>
               </li>
               <li className="topo-item">
-                <Link href="/pagina-exemplo">Exemplo</Link>
+                <Link href="/contato">Contato</Link>
               </li>
               <li className="topo-item">
                 <Link href="/informacoes">+</Link>
@@ -91,12 +94,15 @@ export default function Topo() {
           <li className="topo-item">
             <Link href="/">Home</Link>
           </li>
+           <li className="topo-item">
+                <Link href="/servicos">Servicos</Link>
+              </li>
           <li className="topo-item">
             <Link href="/sobre-nos">Sobre nós</Link>
           </li>
-          <li className="topo-item">
-            <Link href="/pagina-exemplo">Exemplo</Link>
-          </li>
+         <li className="topo-item">
+                <Link href="/contato">Contato</Link>
+              </li>
           <li className="topo-item">
             <Link href="/informacoes">+</Link>
           </li>

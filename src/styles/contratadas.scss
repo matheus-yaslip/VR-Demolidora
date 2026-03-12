@@ -201,7 +201,7 @@
         font-family: var(--font-josefin);
         font-size: 25px;
         padding: 5px 0px;
-        color: $color-purple-2;
+        color: #9d090b;
       }
 
       .text {
@@ -251,7 +251,7 @@
           scroll-margin-top: 120px;
           font-size: 30px;
           font-weight: 600;
-          color: $color-purple-3;
+          color: #9d090b;
 
           @media (max-width: 650px) {
             font-size: 25px;
@@ -280,7 +280,7 @@
         }
 
         a {
-          color: $color-purple-2;
+          color: #9d090b;
         }
       }
     }
@@ -318,14 +318,14 @@
   }
 
   a {
-    background-color: $color-purple-3;
+    background-color: #9d090b;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: $color-purple-2;
+      background-color: #9d090b;
       transition: all 0.3s ease;
     }
   }
@@ -353,7 +353,7 @@
     font-weight: bold;
     padding: 15px 0;
     margin: 0 0 5px 0;
-    background-color: $color-purple-2;
+    background-color: #9d090b;
     text-align: center;
     border-radius: 10px 10px 0 0;
     color: white;
@@ -467,7 +467,7 @@
 
   a {
     font-weight: 700;
-    color: $color-purple-2;
+    color: #9d090b;
   }
 }
 

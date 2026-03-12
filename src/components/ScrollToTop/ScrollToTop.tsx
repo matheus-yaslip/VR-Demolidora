@@ -17,12 +17,13 @@ export default function ScrollToTop() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return (
-    isScroll && (
-      <a href="#" className="voltar-para-o-topo">
-        <span style={{ display: "none" }}>.</span>
-        <IoChevronUp size={30} />
-      </a>
-    )
+ return (
+  <a
+    href="#"
+    className={`voltar-para-o-topo ${isScroll ? "visible" : ""}`}
+  >
+    <span style={{ display: "none" }}>.</span>
+    <IoChevronUp size={30} />
+  </a>
   );
 }

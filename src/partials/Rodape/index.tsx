@@ -10,6 +10,14 @@ import { url, settings } from "@/settings/settings";
 import { usePathname } from "next/navigation";
 import { FaMapMarkedAlt } from "react-icons/fa";
 
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaFacebookF
+} from "react-icons/fa6";
+
+
 export default function Rodape() {
   const { siteName, selosDark, numeroTelefone, ddd, email, whatsappApi } =
     settings;
@@ -20,140 +28,157 @@ export default function Rodape() {
   const fullUrl = `${urlFormatted}${pathname}`;
 
   return (
-    <footer>
+
+
+    <footer className="footer">
+      {/* TOP */}
+
       <div className="top">
-        <Link className="logoFooter" href={`/`}>
-          <Image src="/logo.webp" width={200} height={60} alt="" />
-        </Link>
-        <div className="menuFooter">
-          <h2>Menu</h2>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/contato">Contato</Link>
-            </li>
-            <li>
-              <Link href="/informacoes">+</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="contactFooter">
-          <h2>Contato</h2>
-          <ul>
-            <li>
-              <BsTelephoneForward />
-              <Link
-                href={`tel:0${ddd}${numeroTelefone}`}
-              >{`(${ddd}) ${numeroTelefone}`}</Link>
-            </li>
-            <li>
-              <IoMailOutline size={20} />
-              <Link href={`mailto:${email}`}>{`${email}`}</Link>
-            </li>
-            <li>
-              <FaMapMarkedAlt />{" "}
-              <Link href={urlMaps} target="_blank">{`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="footerSelos">
-          <div className="logoYaslip">
-            <object
-              data={`/selos/${
-                selosDark ? "selo-preto.svg" : "selo-branco.svg"
-              }`}
-              type="image/svg+xml"
-            ></object>
+        <div className="container">
+          {/* CoL */}
+          <div className="col brand">
+            <Link className="logoFooter" href={'/'}>
+              <Image src="/imgs/logo.png" width={220} height={70} alt={`${siteName} logo`} />
+            </Link>
+
+            <p className="description">
+              Seu parceiro de confiança em locação de equipamentos — impulsionando produtividade,
+              performance e o sucesso do seu projeto.
+            </p>
+
+            <div className="social">
+              <a arial-label="facebook" href="#" target="_blank" rel="noreferrer">
+                <FaFacebookF /> 
+              </a>
+
+              <a arial-label="linkedin" href="#" target="_blank" rel="noreferrer">
+                 <FaLinkedinIn /> 
+              </a>
+
+              <a arial-label="X" href="#" target="_blank" rel="noreferrer">
+                <FaXTwitter /> 
+              </a>
+
+              <a arial-label="instagram" href="#" target="_blank" rel="noreferrer">
+               <FaInstagram /> 
+              </a>
+            </div>
           </div>
-          <ul>
-            <li>
-              <Link
-                href={`http://validator.w3.org/check?uri=${fullUrl}`}
-                target="_blank"
-              >
-                <Image
-                  alt="W3C HTML Validator"
-                  src={`/selos/${
-                    selosDark ? "w3c-html-preto.webp" : "w3c-html.webp"
-                  }`}
-                  width={40}
-                  height={60}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={`http://jigsaw.w3.org/css-validator/validator?uri=${fullUrl}`}
-                target="_blank"
-              >
-                <Image
-                  alt="W3C CSS Validator"
-                  src={`/selos/${
-                    selosDark ? "w3c-css-preto.webp" : "w3c-css.webp"
-                  }`}
-                  width={40}
-                  height={60}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={`https://developers.google.com/speed/pagespeed/insights/?url=${fullUrl}`}
-                target="_blank"
-              >
-                <Image
-                  alt="Google PageSpeed"
-                  src={`/selos/${
-                    selosDark ? "pagespeed-preto.webp" : "pagespeed.webp"
-                  }`}
-                  width={40}
-                  height={60}
-                />
-              </Link>
-            </li>
-            <li>
-              {typeof window !== "undefined" &&
-                window.location.protocol === "https:" && (
-                  <Link
-                    href={`https://www.sslshopper.com/ssl-checker.html#hostname=${fullUrl}`}
-                    target="_blank"
-                  >
-                    <Image
-                      alt="SSL"
-                      src={`/selos/${
-                        selosDark ? "ssl-preto.webp" : "ssl.webp"
-                      }`}
-                      width={40}
-                      height={60}
-                    />
+
+          {/* CoL 2*/}
+
+          <nav className="col links">
+            <h3 className=" title">Menu</h3>
+            <ul className="list">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/">Serviços</Link></li>
+              <li><Link href="/">Sobre nós</Link></li>
+              <li><Link href="/">Contato</Link></li>
+              <li><Link href="/">+</Link></li>
+            </ul>
+          </nav>
+
+          {/* CoL 3*/}
+
+          <div className="col contact">
+            <h3 className="title" > Informações contato </h3>
+
+            <div className=" contatctList">
+              <div className="contatctItem">
+                <span className="iconCircle">
+                  <BsTelephoneForward />
+                </span>
+                <div className="contactText">
+                  <span className="label"> Numero de Telefone</span>
+                  <Link href={`tel:0${ddd}${numeroTelefone}`}>{` +${ddd} ${numeroTelefone}`}</Link>
+                </div>
+              </div>
+
+              <div className="contactItem">
+                <span className="iconCircle">
+                  <IoMailOutline />
+                </span>
+
+                <div className="contactText">
+                  <span className="label"></span> Email Address
+                  <Link href={`malito :${email}`}>{email}</Link>
+                </div>
+              </div>
+
+              <div className="contactItem">
+                <span className="iconCircle">
+                  <FaMapMarkedAlt />
+                </span>
+
+                <div className="contactText">
+                  <span className="label"> Nossa Localização</span>
+                  <Link href={urlMaps} target="_blank">
+                    {`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}
                   </Link>
-                )}
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Col 4 */}
+          <div className="col newletter">
+            <h3 className="title"> Fale conosco</h3>
+            <p className="nextText">
+              Deixe seu email abaixo
+            </p>
+
+            <form className="form" onSubmit={(e) => e.preventDefault()}>
+              <input
+                className="input"
+                type="email"
+                placeholder="Email"
+                aria-label="Email"
+              />
+
+              <button className="btn" type="submit" arial-label="Escreva-se">
+                {/* <HiOutlinePaperAirplane /> */}
+              </button>
+            </form>
+
+            <span className="finePrint">Em pouco tempo receberá novidades!</span>
+
+          </div>
         </div>
       </div>
-      <div className="bottomRowFooter">
-        <p>
-          Copyright © {year} {siteName}. Todos os direitos reservados{" "}
-          <Link href="/mapa-site">.</Link>
-        </p>
+
+      {/* BOTTOM */}
+
+      <div className="bottom">
+        <div className="container bottomInner">
+          <p className="copy">
+            Copyright © {year} {siteName}. All Rights Reserved.
+            {" "}
+
+            <Link href={`http://validator.w3.org/check?uri=${fullUrl}`} target="_blank" rel="noreferrer">
+              Validator
+            </Link>
+          </p>
+
+          <div className="legal">
+            <Link href="#"> Termos e condições</Link>
+            <Link href="#">Politica de Privacidade</Link>
+          </div>
+        </div>
       </div>
+
+        {/*  WhatsApp */}
       <div className="whatsapp-btn">
-        <a
-          target="blank"
-          rel="nofollow"
-          href={whatsappApi}
-          aria-label="Botão Whatsapp"
-        >
+        <a target="blank" rel="nofollow" href={whatsappApi} aria-label="Botão Whatsapp">
           <div className="animated infinite zoomIn whatsapp-animate-circulo-pulse"></div>
           <div className="animated infinite pulse whatsapp-btn-bg"></div>
           <div className="animated infinite tada whatsapp-btn-config"></div>
           <span style={{ display: "none" }}>.</span>
         </a>
       </div>
+
       <ScrollToTop />
     </footer>
+
+
   );
 }

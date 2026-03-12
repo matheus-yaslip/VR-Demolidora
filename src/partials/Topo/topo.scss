@@ -10,9 +10,10 @@ header {
     align-items: center;
     position: absolute;
     color: rgb(63, 63, 63);
-    background-color: rgb(255, 255, 255);
+
     width: 100%;
     z-index: 3;
+
 
     &.fixed {
       position: fixed;
@@ -24,6 +25,7 @@ header {
         from {
           transform: translateY(-100px);
         }
+
         to {
           transform: translateY(0);
         }
@@ -37,7 +39,7 @@ header {
     .topo-contato {
       display: flex;
       width: 100%;
-      background-color: $color-purple-3;
+      background-color: black;
       color: white;
       justify-content: center;
       padding: 10px 20px;
@@ -83,8 +85,14 @@ header {
       justify-content: space-around;
       padding: 10px 0px;
       z-index: 4;
-      background-color: rgb(250, 250, 250);
-      box-shadow: 0px 5px 20px 2px rgba(30, 64, 80, 0.336);
+      background: rgb(27, 27, 27);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: white;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 10px 25px rgba(0, 0, 0, 0.4);
 
       .base {
         display: flex;
@@ -94,9 +102,16 @@ header {
 
         a {
           img {
+            background: #fff;
+              border-radius: 2.5rem;
+              padding: 0.25rem;
             @media (max-width: 768px) {
-              width: 180px; // Aumentando um pouco para dispositivos móveis
+              width: 160px; // Aumentando um pouco para dispositivos móveis
               height: 60px; // Aumentando proporcionalmente
+              background: #fff;
+              border-radius: 2.5rem;
+              padding: 0.25rem;
+
             }
           }
         }
@@ -121,15 +136,16 @@ header {
               font-weight: 500;
 
               &:hover {
-                color: $color-light-purple-2;
+                color: #9d090b;
                 transition: all 0.3s ease;
               }
             }
           }
         }
       }
+
       .botao-contato {
-        background-color: $color-purple-3;
+        background-color: #9d090b;
         padding: 10px 20px;
         font-family: var(--font-poppins);
         color: white;
@@ -141,12 +157,13 @@ header {
         }
 
         &:hover {
-          background-color: $color-light-purple-2;
+          background-color: #750507;
           transition: all 0.3s ease;
         }
       }
     }
   }
+
   .menu-mobile {
     display: flex;
     justify-content: center;

@@ -11,35 +11,124 @@ import Link from "next/link";
 const { numeroTelefone, ddd, email } = settings;
 const { rua, numero, cidade, estado, cep, urlMaps } = settings.endereco;
 
+
+const mapEmbedUrl =
+  "mapEmbedUrl" in settings.endereco
+    ? (settings.endereco as { mapEmbedUrl?: string }).mapEmbedUrl
+    : undefined;
+
 export default function Form() {
   const pathname = usePathname();
+  if (pathname === "/contato") return null;
 
-  if (pathname === "/contato") return null; // Caso seja página de contato, não exibe o formulário
+  const phoneHref = `tel:0${ddd}${numeroTelefone}`;
+  const mailHref = `mailto:${email}`;
+
+
+  const iframeSrc =
+    mapEmbedUrl || (urlMaps?.includes("google.com/maps/embed") ? urlMaps : "");
 
   return (
-    <div className="included-form">
-      <div className="base">
-        <div className="box-details">
-          <div className="box-title">
-            <h2 className="title">Entre em contato</h2>
-            <p className="description">
-              Tire suas dúvidas e solicite um orçamento.
+    <section className="included-form" aria-label="Contato">
+      <div className="included-form__container">
+        {/* COLUNA ESQUERDA */}
+        <div className="included-form__left">
+          <div className="included-form__header">
+            <span className="included-form__badge">Contato</span>
+            <h2 className="included-form__title">
+              Vamos falar sobre suas necessidades
+            </h2>
+            <p className="included-form__subtitle">
+              Tire suas dúvidas, consulte disponibilidade e solicite um orçamento.
+              Nossa equipe responde rapidamente.
             </p>
           </div>
-          <div className="contact">
-            <Link href={`tel:0${ddd}${numeroTelefone}`} target="_blank" rel="noreferrer">
-              <FaPhone /> {`(${ddd}) ${numeroTelefone}`}
-            </Link>
-            <Link href={`mailto:${email}`} target="_blank" rel="noreferrer">
-              <FiMail /> {`${email}`}
-            </Link>
-            <Link href={urlMaps} target="_blank" rel="noreferrer">
-              <FaMapMarkedAlt /> {`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}
-            </Link>
+
+          <div className="included-form__cards">
+            <div className="included-form__contactCard">
+              <div className="included-form__contactIcon">
+                <FaPhone />
+              </div>
+              <div className="included-form__contactText">
+                <span className="included-form__contactLabel">Ligue agora</span>
+                <Link
+                  href={phoneHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="included-form__contactValue"
+                >
+                  {`(${ddd}) ${numeroTelefone}`}
+                </Link>
+              </div>
+            </div>
+
+            <div className="included-form__contactCard">
+              <div className="included-form__contactIcon">
+                <FiMail />
+              </div>
+              <div className="included-form__contactText">
+                <span className="included-form__contactLabel">E-mail</span>
+                <Link
+                  href={mailHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="included-form__contactValue"
+                >
+                  {email}
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            href={urlMaps}
+            target="_blank"
+            rel="noreferrer"
+            className="included-form__address"
+            aria-label="Abrir endereço no Google Maps"
+          >
+            <FaMapMarkedAlt />
+            <span>{`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}</span>
+          </Link>
+
+          <div className="included-form__map">
+            {iframeSrc ? (
+              <iframe
+                src={iframeSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                title="Mapa"
+              />
+            ) : (
+              <div className="included-form__mapFallback">
+                <p>
+                  Mapa não configurado. Adicione{" "}
+                  <strong>mapEmbedUrl</strong> nas configurações.
+                </p>
+                <Link href={urlMaps} target="_blank" rel="noreferrer">
+                  Abrir no Google Maps
+                </Link>
+              </div>
+            )}
           </div>
         </div>
-        <ContactForm variation="contatoFormIncluded" />
-      </div>  
-    </div>
+
+        {/* COLUNA DIREITA */}
+        <aside className="included-form__right" aria-label="Formulário de contato">
+          <div className="included-form__formCard">
+            <div className="included-form__formHead">
+              <h3>Fale com a gente</h3>
+              <p>
+                Tem dúvidas sobre valores, disponibilidade ou suporte? Envie uma
+                mensagem — estamos prontos para ajudar.
+              </p>
+            </div>
+
+            <ContactForm variation="contatoFormIncluded" />
+          </div>
+        </aside>
+      </div>
+    </section>
   );
 }

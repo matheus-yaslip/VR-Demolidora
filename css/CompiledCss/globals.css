@@ -7,10 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body,html{
-  overflow-x: hidden;
-}
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -57,9 +53,8 @@ ol {
   left: -2px !important;
   bottom: 40px !important;
   transition: all 0.3s ease !important;
-
-  &:hover {
-    transition: all 0.3s ease !important;
-    width: 256px !important;
-  }
+}
+.grecaptcha-badge:hover {
+  transition: all 0.3s ease !important;
+  width: 256px !important;
 }

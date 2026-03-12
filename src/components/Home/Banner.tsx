@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Banner() {
   return (
@@ -21,43 +22,43 @@ export default function Banner() {
         slidesPerView={1}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="slide-item banner-1">
-            <div className="texto">
-              <h2>Lorem Ipsum</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                viverra erat non velit iaculis, ut facilisis nibh aliquam.
-                Vivamus non nulla ut dolor semper dignissim eu sit amet nunc.
-              </p>
-              <Link href="/sobre">Saiba mais</Link>
-            </div>
-          </div>
-        </SwiperSlide>
 
         <SwiperSlide>
-          <div className="slide-item banner-2">
-            <div className="texto">
-              <h2>Nec pharetra Augue Congue quis</h2>
-              <p>
-                Nam nec auctor diam, a cursus velit. Nulla ultricies a massa
-                feugiat egestas. Etiam eget vehicula erat, eu varius lacus.
-                Integer eget molestie quam, sit amet lobortis ligula.
-              </p>
-              <Link href="/sobre">Saiba mais</Link>
-            </div>
-          </div>
-        </SwiperSlide>
+          <div className="slide-item hero">
+            <div className="container">
+              <div className="content">
+                <span className="kicker">
+                  <i className="kickerLine" />
+                  Bem-vindo ao Nosso Site
+                </span>
 
-        <SwiperSlide>
-          <div className="slide-item banner-3">
-            <div className="texto">
-              <h2>Donec pretium</h2>
-              <p>
-                Maecenas lobortis, quam vitae suscipit dignissim, purus lectus
-                scelerisque lorem, sed posuere orci turpis sed tortor.
-              </p>
-              <Link href="/sobre">Saiba mais</Link>
+
+                <h2 className="title">
+                  Primos Terraplenagem
+                  <br />
+                  Equipamentos e Serviços
+                </h2>
+
+                <p className="subtitle">
+                  Conheça a Primos Terraplenagem
+                  Trabalhamos com equipamentos modernos e serviços de alta qualidade, garantindo eficiência,<br />segurança e confiança para sua obra do início ao fim.
+                </p>
+
+                <Link className="cta" href="/sobre">
+                  Veja mais <span className="aarow">→</span>
+                </Link>
+              </div>
+
+              <div className="media">
+                <Image
+                  className="tractor"
+                  src="/imgs/trator.webp"
+                  alt="Equipamento "
+                  width={1100}
+                  height={650}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </SwiperSlide>
