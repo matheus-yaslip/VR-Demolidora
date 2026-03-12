@@ -94,8 +94,8 @@ header .topo .topo-menu .base a img {
 }
 @media (max-width: 768px) {
   header .topo .topo-menu .base a img {
-    width: 160px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     background: #fff;
     border-radius: 2.5rem;
     padding: 0.25rem;
@@ -121,11 +121,11 @@ header .topo .topo-menu .base .topo-links .topo-item a {
   font-weight: 500;
 }
 header .topo .topo-menu .base .topo-links .topo-item a:hover {
-  color: #9d090b;
+  color: #ffc600;
   transition: all 0.3s ease;
 }
 header .topo .topo-menu .botao-contato {
-  background-color: #9d090b;
+  background-color: #ffc600;
   padding: 10px 20px;
   font-family: var(--font-poppins);
   color: white;

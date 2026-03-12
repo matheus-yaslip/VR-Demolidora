@@ -106,8 +106,8 @@ header {
               border-radius: 2.5rem;
               padding: 0.25rem;
             @media (max-width: 768px) {
-              width: 160px; // Aumentando um pouco para dispositivos móveis
-              height: 60px; // Aumentando proporcionalmente
+              width: 150px; // Aumentando um pouco para dispositivos móveis
+              height: 50px; // Aumentando proporcionalmente
               background: #fff;
               border-radius: 2.5rem;
               padding: 0.25rem;
@@ -136,7 +136,7 @@ header {
               font-weight: 500;
 
               &:hover {
-                color: #9d090b;
+                color: #ffc600;
                 transition: all 0.3s ease;
               }
             }
@@ -145,7 +145,7 @@ header {
       }
 
       .botao-contato {
-        background-color: #9d090b;
+        background-color: #ffc600;
         padding: 10px 20px;
         font-family: var(--font-poppins);
         color: white;

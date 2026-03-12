@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "./ScrollToTop.scss";
+import "./ScrollToTopMobile.scss";
 
-export default function ScrollToTop() {
+export default function ScrollToTopMobile() {
   const [progress, setProgress] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updateScroll = () => {
@@ -20,11 +19,11 @@ export default function ScrollToTop() {
       const currentProgress = (scrollTop / totalScrollable) * 100;
 
       setProgress(Math.round(currentProgress));
-      setIsVisible(currentProgress > 5);
     };
 
     window.addEventListener("scroll", updateScroll, { passive: true });
     window.addEventListener("resize", updateScroll);
+
     updateScroll();
 
     return () => {
@@ -43,7 +42,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`scroll-button ${isVisible ? "visible" : "hidden"}`}
+      className="voltar-para-o-topo-mobile icone progress-mobile"
       aria-label="Voltar ao topo"
     >
       <svg className="progress-ring" viewBox="0 0 56 56">
@@ -66,7 +65,6 @@ export default function ScrollToTop() {
           strokeDasharray={circumference}
           style={{
             strokeDashoffset: offset,
-            transition: "stroke-dashoffset 0.1s ease-out",
           }}
           className="progress-bar"
         />

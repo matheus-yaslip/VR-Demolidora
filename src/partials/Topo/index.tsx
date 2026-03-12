@@ -63,7 +63,7 @@ export default function Topo() {
         <div className="topo-menu">
           <div className="base">
             <Link href="/">
-              <Image alt="Imagem" src="/imgs/logo.png" width={200} height={60} />
+              <Image alt="Imagem" src="/imgs/logo.jpg" width={200} height={60} />
             </Link>
             <ul className="topo-links">
               <li className="topo-item">

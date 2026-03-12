@@ -38,7 +38,7 @@ export default function Rodape() {
           {/* CoL */}
           <div className="col brand">
             <Link className="logoFooter" href={'/'}>
-              <Image src="/imgs/logo.png" width={220} height={70} alt={`${siteName} logo`} />
+              <Image src="/imgs/logo.jpg" width={220} height={70} alt={`${siteName} logo`} />
             </Link>
 
             <p className="description">

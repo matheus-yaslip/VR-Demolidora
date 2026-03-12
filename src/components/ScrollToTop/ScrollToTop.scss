@@ -1,48 +1,104 @@
-@use "../../styles/colors.scss" as *;
+// ========================
+// Variáveis
+// ========================
+$size: 56px;
+// verde base
+$primary: #92bda8;
+// dourado destaque
+$accent: #ebc343;
 
-/* ---------------------- Botao Voltar Ao Topo ------------------ */
-.voltar-para-o-topo {
-  display: flex;
+$bg-color: $primary;
+$blur: 12px;
+$text-color: #ffffff;
+$bg-ring: rgba(146, 189, 168, 0.25);
+$transition-speed: 0.5s;
+
+.scroll-button {
   position: fixed;
-  justify-content: center;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+
+  display: flex;
   align-items: center;
-  right: 38px;
-  bottom: 35px;
-  z-index: 99;
-  width: 50px;
-  height: 50px;
+  justify-content: center;
+
+  width: $size;
+  height: $size;
+
   border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #92bda8, #fff687);
+  border: 2px solid #FFFF;
+  backdrop-filter: blur($blur);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  transition: all $transition-speed ease;
 
-  box-shadow: inset 0 0 0 3px rgba(70, 69, 69, 0.568);
-  background-color: #1b1b1b;
-
-  opacity: 0;
-  transform: translateY(40px);
-  pointer-events: none;
-
-  transition: all 0.4s ease;
-
-  svg {
-    color: #9d090b;
-    transition: all 0.3s ease;
-  }
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  @media (max-width: 768px) {
+    display: none;
   }
 
   &:hover {
-    background-color: rgba(39, 39, 39, 0.425);
-    box-shadow: inset 0 0 0 3px rgba(189, 189, 189, 0.438);
-
-    svg {
-      color: white;
-    }
+    transform: scale(1.1);
   }
 
-  @media (max-width: 768px) {
-    display: none !important;
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  &.hidden {
+    transform: translateY(80px) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // ========================
+  // SVG
+  // ========================
+  .progress-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  // Fundo do círculo
+  .progress-bg {
+    color: $bg-ring;
+  }
+
+  // Barra de progresso (dourada destaque)
+  .progress-bar {
+    // color: $accent;
+    color: #000;
+    transition: stroke-dashoffset 0.15s ease-out;
+  }
+
+  // ========================
+  // Texto central
+  // ========================
+  .progress-text {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 10px;
+      font-weight: bold;
+      color: $text-color;
+      line-height: 1;
+      font-family: "Numbers", sans-serif;
+      color: #000;
+    }
   }
 }

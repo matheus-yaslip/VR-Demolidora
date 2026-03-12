@@ -62,7 +62,7 @@ export default function First() {
             Serviços.</h2>
 
           <p className="desc">
-            Por todas as suas realizações e história inovadora, a Primos Terraplenagem construiu um nome respeitado e tornou-se sinônimo de qualidade e solidez neste segmento.
+            Por todas as suas realizações e história inovadora, a VR Demolidora construiu um nome respeitado e tornou-se sinônimo de qualidade e solidez neste segmento.
           </p>
 
           <div className="bulletsWrap">

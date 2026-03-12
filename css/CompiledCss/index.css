@@ -80,7 +80,7 @@ body {
   font-weight: 900;
   font-size: 64px;
   line-height: 1;
-  color: #9d090b;
+  color: #ffc600;
   margin-bottom: 10px;
 }
 .about .statLabel {
@@ -109,7 +109,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #9d090b;
+  color: #ffc600;
 }
 .about .kickerIcon svg {
   font-size: 16px;
@@ -221,7 +221,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  background: #9d090b;
+  background: #ffc600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -251,7 +251,7 @@ body {
   margin-top: 20px;
   justify-content: center;
   padding: 14px 22px;
-  background: #9d090b;
+  background: #ffc600;
   color: #ffffff;
   font-family: var(--font-poppins);
   font-weight: 800;
@@ -314,7 +314,7 @@ body {
   /* ===== HERO (igual ao print) ===== */
 }
 .banner .slide-item.hero {
-  background: #9d090b;
+  background: #ffc600;
   overflow: hidden;
 }
 .banner .slide-item.hero::before {
@@ -609,7 +609,7 @@ body {
   padding: 13px;
   border-radius: 999px;
   background: rgba(255, 133, 51, 0.16);
-  color: #9d090b;
+  color: #ffc600;
   box-sizing: content-box;
 }
 .container-contato .base .box-details .contact a span,
@@ -621,7 +621,7 @@ body {
 .container-contato .base .box-details .contact a strong {
   font-size: 12px;
   font-weight: 700;
-  color: #9d090b;
+  color: #ffc600;
   line-height: 1.2;
 }
 .container-contato .base .box-details .contact a span {
@@ -717,7 +717,7 @@ body {
   display: grid;
   place-items: center;
   background: rgba(255, 133, 51, 0.16);
-  color: #9d090b;
+  color: #ffc600;
 }
 .included-form__contactIcon svg {
   width: 18px;
@@ -732,7 +732,7 @@ body {
 .included-form__contactLabel {
   font-size: 12px;
   font-weight: 700;
-  color: #9d090b;
+  color: #ffc600;
 }
 .included-form__contactValue {
   font-size: 14px;
@@ -762,7 +762,7 @@ body {
 }
 .included-form__address svg {
   flex: 0 0 auto;
-  color: #9d090b;
+  color: #ffc600;
 }
 .included-form__address span {
   font-size: 14px;
@@ -799,7 +799,7 @@ body {
   line-height: 1.5;
 }
 .included-form__mapFallback a {
-  color: #9d090b;
+  color: #ffc600;
   font-weight: 800;
   text-decoration: none;
 }
@@ -889,7 +889,7 @@ body {
   font-size: 14px;
   font-weight: 900;
   cursor: pointer;
-  background: #9d090b;
+  background: #ffc600;
   color: #ffffff;
   box-shadow: 0 10px 20px rgba(255, 122, 47, 0.28);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -897,7 +897,7 @@ body {
 .included-form button[type=submit]:hover,
 .included-form .submit-button:hover {
   transform: translateY(-1px);
-  background-color: #d30f12;
+  background-color: #cfa50b;
   box-shadow: 0 12px 26px rgba(255, 122, 47, 0.34);
 }
 .included-form button[type=submit]:active,
@@ -1260,7 +1260,7 @@ body {
   width: 100%;
 }
 .heroMach__topbar {
-  background: #9d090b;
+  background: #ffc600;
 }
 .heroMach__topInner {
   max-width: 1200px;
@@ -1341,7 +1341,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #9d090b;
+  background: #ffc600;
   color: #fff;
   font-weight: 800;
   padding: 12px 18px;
@@ -1407,7 +1407,7 @@ body {
 
 .ecoKicker {
   display: inline-block;
-  color: #9d090b;
+  color: #ffc600;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -1419,7 +1419,7 @@ body {
 }
 
 .ecoButton {
-  background: #9d090b;
+  background: #ffc600;
   color: #fff;
   padding: 14px 26px;
   font-weight: 600;
@@ -1464,7 +1464,7 @@ body {
   position: absolute;
   bottom: 15px;
   left: 15px;
-  background: #9d090b;
+  background: #ffc600;
   color: #fff;
   padding: 10px 12px;
   text-align: center;
@@ -1501,7 +1501,7 @@ body {
 
 .ecoReadMore {
   font-size: 14px;
-  color: #9d090b;
+  color: #ffc600;
   font-weight: 600;
   text-decoration: none;
   margin-top: auto;
@@ -1518,7 +1518,7 @@ body {
   bottom: 0;
   width: 0%;
   height: 2px;
-  background: #9d090b;
+  background: #ffc600;
   transition: width 0.3s ease;
 }
 .ecoReadMore:hover::after {
@@ -1583,7 +1583,7 @@ body {
 
 .statItem:nth-child(2) .statValue,
 .statItem:nth-child(4) .statValue {
-  color: #b90a0d;
+  color: #ffc600;
 }
 
 .statLabel {
@@ -1605,7 +1605,7 @@ body {
 }
 
 .kicker {
-  color: #b90a0d;
+  color: #ffc600;
   font-weight: 700;
   font-size: 14px;
 }
@@ -1626,7 +1626,7 @@ body {
 }
 
 .cta {
-  background: #b90a0d;
+  background: #ffc600;
   padding: 12px 22px;
   border-radius: 40px;
   font-weight: 700;
@@ -1740,7 +1740,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 3px;
-  background: #9d090b;
+  background: #ffc600;
   display: inline-block;
 }
 .rentalServices .servicesHeader .left .title {
@@ -1766,7 +1766,7 @@ body {
   height: 44px;
   padding: 0 18px;
   border-radius: 999px;
-  background: #9d090b;
+  background: #ffc600;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -1809,7 +1809,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 999px;
-  background: #9d090b;
+  background: #ffc600;
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -1834,7 +1834,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #9d090b;
+  color: #ffc600;
   font-weight: 700;
   font-size: 14px;
   text-decoration: none;
@@ -1903,7 +1903,7 @@ body {
 }
 
 .faqHeadingHighlight {
-  color: #9d090b;
+  color: #ffc600;
 }
 
 /* ================= ACCORDION ================= */
@@ -1936,8 +1936,8 @@ body {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  border: 1px solid #9d090b;
-  color: #9d090b;
+  border: 1px solid #ffc600;
+  color: #ffc600;
   background: #0b0f14;
 }
 
@@ -2002,7 +2002,7 @@ body {
 }
 
 .svcKickerArrow {
-  color: #9d090b;
+  color: #ffc600;
   font-size: 18px;
   line-height: 1;
   transform: translateY(-1px);
@@ -2020,7 +2020,7 @@ body {
 }
 
 .svcTitleGold {
-  color: #9d090b;
+  color: #ffc600;
 }
 
 .svcLead {
@@ -2055,7 +2055,7 @@ body {
   height: 56px;
   display: grid;
   place-items: center;
-  color: #9d090b;
+  color: #ffc600;
   margin-bottom: 12px;
 }
 .svcIcon svg {
@@ -2074,7 +2074,7 @@ body {
 }
 
 .svcCardTitleB {
-  color: #9d090b;
+  color: #ffc600;
 }
 
 .svcCardText {
@@ -2093,7 +2093,7 @@ body {
   height: 40px;
   padding: 0 22px;
   border-radius: 999px;
-  background: #9d090b;
+  background: #ffc600;
   color: #081f24;
   font-weight: 800;
   font-size: 12px;
@@ -2160,7 +2160,7 @@ body {
 }
 
 .excHero__kickerArrow {
-  color: #9d090b;
+  color: #ffc600;
   font-size: 22px;
   line-height: 1;
   transform: translateY(-1px);
@@ -2188,7 +2188,7 @@ body {
 }
 
 .excHero__titleAccent {
-  color: #9d090b;
+  color: #ffc600;
 }
 
 .excHero__desc {
@@ -2206,7 +2206,7 @@ body {
   color: rgba(255, 255, 255, 0.88);
   font-size: 14.5px;
   line-height: 1.75;
-  border-left: 2px solid #9d090b;
+  border-left: 2px solid #ffc600;
 }
 
 .excHero__components {
@@ -2220,7 +2220,7 @@ body {
 }
 
 .excHero__componentsLabel {
-  color: #9d090b;
+  color: #ffc600;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.2;
@@ -2252,7 +2252,7 @@ body {
   justify-content: center;
   width: 20px;
   height: 20px;
-  color: #9d090b;
+  color: #ffc600;
   flex-shrink: 0;
 }
 
@@ -2261,7 +2261,7 @@ body {
   cursor: pointer;
   padding: 12px 22px;
   border-radius: 999px;
-  background: #9d090b;
+  background: #ffc600;
   color: #ffffff;
   font-weight: 800;
   font-size: 13px;

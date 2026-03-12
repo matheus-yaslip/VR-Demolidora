@@ -1,5 +1,22 @@
 @use "../../styles/colors.scss" as *;
 
+
+// ========================
+// Variáveis
+// ========================
+$size: 56px;
+// verde base
+$primary: #92bda8;
+// dourado destaque
+$accent: #ebc343;
+
+$bg-color: $primary;
+$blur: 12px;
+$text-color: #ffffff;
+$bg-ring: rgba(146, 189, 168, 0.25);
+$transition-speed: 0.5s;
+
+
 /* ---------------------- Rodape Mobile ------------------ */
 .rodape-mobile {
   width: 100%;

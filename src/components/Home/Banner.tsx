@@ -34,13 +34,13 @@ export default function Banner() {
 
 
                 <h2 className="title">
-                  Primos Terraplenagem
+                  VR Demolidora
                   <br />
                   Equipamentos e Serviços
                 </h2>
 
                 <p className="subtitle">
-                  Conheça a Primos Terraplenagem
+                  Conheça a VR Demolidora
                   Trabalhamos com equipamentos modernos e serviços de alta qualidade, garantindo eficiência,<br />segurança e confiança para sua obra do início ao fim.
                 </p>
 

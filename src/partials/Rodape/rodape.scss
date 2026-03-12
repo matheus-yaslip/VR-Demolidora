@@ -105,7 +105,7 @@
       width: 36px;
       height: 36px;
       border-radius: 999px;
-      background: #9d090b; 
+      background: #ffc600; 
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -141,7 +141,7 @@
         width: 7px;
         height: 7px;
         border-radius: 999px;
-        background: #9d090b;
+        background: #ffc600;
         position: absolute;
         left: 0;
         top: 10px;
@@ -181,7 +181,7 @@
     width: 44px;
     height: 44px;
     border-radius: 999px;
-    background: #9d090b;
+    background: #ffc600;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -212,7 +212,7 @@
       &:hover {
         color: #fff;
         text-decoration: underline;
-        text-decoration-color: #9d090b;
+        text-decoration-color: #ffc600;
         text-underline-offset: 3px;
       }
     }
@@ -255,7 +255,7 @@
   .btn {
     border: 0;
     outline: 0;
-    background: #9d090b;
+    background: #ffc600;
     color: #1a1a1a;
     cursor: pointer;
     display: inline-flex;
@@ -329,7 +329,7 @@
         width: 7px;
         height: 7px;
         border-radius: 999px;
-        background: #9d090b;
+        background: #ffc600;
         position: absolute;
         left: 0;
         top: 8px;
