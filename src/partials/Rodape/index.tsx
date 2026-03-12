@@ -19,7 +19,7 @@ import {
 
 
 export default function Rodape() {
-  const { siteName, selosDark, numeroTelefone, ddd, email, whatsappApi } =
+  const { siteName, numeroTelefone, ddd, email, whatsappApi } =
     settings;
   const { rua, numero, cidade, estado, cep, urlMaps } = settings.endereco;
   const year = new Date().getFullYear();

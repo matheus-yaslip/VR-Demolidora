@@ -3,7 +3,6 @@ import { useState } from "react";
 import { settings, url } from "@/settings/settings";
 import { ResponseData, FormData } from "@/types";
 import styles from './ContactForm.module.scss';
-import z from "zod";
 import { FormDataSchema } from "@/schemas/form";
 
 const { siteName, emailDestinatario } = settings;
