@@ -1,34 +1,11 @@
-@use "../../styles/colors.scss" as *;
-
-
-// ========================
-// Variáveis
-// ========================
-$size: 56px;
-// verde base
-$primary: #92bda8;
-// dourado destaque
-$accent: #ebc343;
-
-$bg-color: $primary;
-$blur: 12px;
-$text-color: #ffffff;
-$bg-ring: rgba(146, 189, 168, 0.25);
-$transition-speed: 0.5s;
-
-
-/* ---------------------- Rodape Mobile ------------------ */
 .rodape-mobile {
   width: 100%;
   color: #ffffff;
-  // background: $color-purple-2;
   height: auto;
   position: fixed;
-  width: 100%;
   background-color: rgba(223, 223, 223, 0.588);
   backdrop-filter: blur(15px);
   box-shadow: 0 5px 20px 2px #303b41b8;
-  // box-shadow: 0px 10px 10px 6px #1a1a1a;
   bottom: 0;
   padding: 5px 0;
   z-index: 5;
@@ -36,8 +13,10 @@ $transition-speed: 0.5s;
   .icones-rodape {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
-    a {
+    a,
+    button {
       margin: 5px 20px;
     }
 
@@ -50,6 +29,10 @@ $transition-speed: 0.5s;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0;
+      border: none;
+      outline: none;
+      flex-shrink: 0;
     }
 
     .phone {
@@ -65,11 +48,7 @@ $transition-speed: 0.5s;
     }
 
     .voltar-para-o-topo-mobile {
-      background-color: #f5f5f5;
-
-      svg {
-        color: #000;
-      }
+      background-color: #f4bc33 !important;
     }
   }
 }

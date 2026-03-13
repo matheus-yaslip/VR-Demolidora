@@ -1,53 +1,50 @@
 .progress-mobile {
+  position: relative;
+  background-color: #f4bc33 !important;
+  border: 2px solid #fff;
+
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+
+  width: 50px !important;
+  height: 50px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .progress-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .progress-bg {
+    color: #fff;
+  }
+
+  .progress-bar {
+    color: #000;
+    transition: stroke-dashoffset 0.15s ease-out;
+  }
+
+  .progress-text {
     position: relative;
-    // background: linear-gradient(135deg, #92bda8, #fff687);
-    background-color: #f4bc33 !important;
-    border: 2px solid #fff;
-    width: 60px !important;
-    height: 60px !important;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @media screen and (min-width: 320px) and (max-width: 375px) {
-        width: 53px !important;
-        height: 53px !important;
+    span {
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #fff;
+      line-height: 1;
+      font-family: "Montserrat", sans-serif;
     }
-
-    .progress-ring {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: rotate(-90deg);
-    }
-
-    .progress-bg {
-        // color: rgba(146, 189, 168, 0.25);
-        color: #fff;
-    }
-
-    .progress-bar {
-        color: #000;
-        transition: stroke-dashoffset 0.15s ease-out;
-    }
-
-    .progress-text {
-        position: relative;
-        z-index: 2;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        // svg {
-        //     font-size: 12px;
-        //     color: #fff;
-        // }
-
-        span {
-            font-size: .7rem;
-            font-weight: bold;
-            color: #fff;
-            line-height: 1;
-            font-family: 'Montserrat', sans-serif;
-        }
-    }
+  }
 }
