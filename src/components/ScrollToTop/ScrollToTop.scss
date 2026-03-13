@@ -3,7 +3,7 @@
 // ========================
 $size: 56px;
 // verde base
-$primary: #92bda8;
+$primary: #ffc600;
 // dourado destaque
 $accent: #ebc343;
 
@@ -29,7 +29,7 @@ $transition-speed: 0.5s;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #92bda8, #fff687);
+  background: $primary ;
   border: 2px solid #FFFF;
   backdrop-filter: blur($blur);
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
@@ -102,3 +102,5 @@ $transition-speed: 0.5s;
     }
   }
 }
+
+// linear-gradient(135deg, #92bda8, #fff687)
